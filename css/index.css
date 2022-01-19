@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'haji';
+    src: url('/font/BYekan.eot');
+    src: url('/font/BYekan.eot?#iefix') format('embedded-opentype'),
+        url('/font/BYekan.woff2') format('woff2'),
+        url('/font/BYekan.woff') format('woff'),
+        url('/font/BYekan.svg#BYekan') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    font-family:'haji';
+    direction:rtl;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+div[id="Top_menu"]{
+    height:2rem;
+    width:100vw;
+    background-color: #3f37c9;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+div[id="Top_menu"] ul[id="ul1"]{
+    display: flex;
+    width:30rem;
+}
+div[id="Top_menu"] ul[id="ul1"] li a{
+    text-decoration:none;
+    color: #9c91ff;
+    font-size:0.7rem;
+    transition-duration:0.5s;
+}
+div[id="Top_menu"] ul[id="ul1"] li{
+    margin-left:1.5rem;
+    list-style:none;
+}
+div[id="free"]{
+    width:20rem;
+}
+div[id="free"] a{
+    font-size:0.7rem;
+    color:#fbbe8d;
+    text-decoration:none;
+    margin-right:10rem;
+    transition-duration:0.5s;
+}
+div[id="Top_menu"] ul[id="ul1"] a:hover{
+    color: aliceblue;
+}
+div[id="lest_menu"]{
+    display: none;
+}
+#background_lest{
+    display:none;
+}
+@media screen and (max-width:700px){
+    #background_lest{
+        display: flex;
+        opacity:0;
+        transition-duration:1s;
+        height:39.14rem;
+        width:0vw;
+        left:-10rem;
+    }
+    div[id="lest_menu"]:focus #background_lest{
+        display: flex;
+        opacity:1;
+        width:100vw;
+        left:0;
+    }
+    div[id="Top_menu"]{
+        height:4rem;
+        justify-content: end;
+    }
+    div[id="Top_menu"] #ul1{
+        display:none;
+    }
+    div[id="free"]{
+        display:none;
+    }
+    /*                         منو هبرگری                      */
+
+    div[id="lest_menu"]:not(#background_lest){
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items: center;
+        width:1.8rem;
+        height:1.8rem;
+        margin-left:1rem;
+    }
+    div[class="lest"]{
+        margin:0.18rem;
+        background-color: rgb(255, 255, 255);
+        width:1.5rem;
+        height:0.20rem;
+        border-radius:1rem;
+    }
+    #lest_style_3{
+        height:0.22.5rem;  
+    }
+    div[id="lest_menu"]:focus #lest_style_2{
+        transform:rotate(45deg);
+        height:0.25rem;
+        transition-duration:0.7s;
+    }
+    div[id="lest_menu"]:focus #lest_style_1{
+        transform:rotate(-45deg);
+        margin-bottom:-0.75rem;
+        height:0.25rem;
+        transition-duration:0.5s;
+    }
+    div[id="lest_menu"]:focus #lest_style_3{
+        opacity:0;
+    }
+    div[id="lest_menu"]:not(#background_lest){
+        transition-duration:0.5s;
+    }
+    div[id="lest_menu"]:focus :not(#background_lest){
+        margin-top:0.5rem;
+    }
+    div[class="lest"]{
+        transition-duration:0.5s;
+    }
+
+    div[id="background_lest"]{
+        position: absolute;
+        top:2.8rem;
+        background-color: #3f37c9;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div[id="background_lest"] ul{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+        padding:0;
+        margin:0rem;
+    }
+    .moshtarek{
+        margin-top:0.5rem;
+        display:block;
+        font-size:1rem;
+        padding:10px;
+        color:hsl(0, 0%, 100%);
+        text-decoration:none;
+        text-align:center;
+        padding:1rem 2.5rem;
+        transition-duration:1s;
+    }
+    .moshtarek:focus{
+        border-radius:1rem;
+        color:hsl(199, 20%, 21%);
+        background-color: rgb(255, 255, 255);
+    }
+}
